@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | CampusEvents</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== Header ===== -->
+    <header class="site-header">
+        <div class="container nav">
+            <a href="index.html" class="brand">
+                <span class="brand-logo">CE</span>
+                <span>Campus<strong>Events</strong></span>
+            </a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu"><span></span></label>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="register.html" class="active">Register</a>
+                <a href="participants.html">Participants</a>
+                <a href="admin.html">Admin</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <div class="container">
+                <h1>Event Registration</h1>
+                <p>Fill in your details to reserve a seat.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container form-layout">
+
+                <!-- ===== Registration form ===== -->
+                <form class="card" action="registered.html" method="get">
+                    <h2>Student details</h2>
+                    <p class="card-subtitle">Fields marked <span style="color: var(--red)">*</span> are required.</p>
+
+                    <div class="form-grid">
+                        <div class="field full">
+                            <label for="event">Select event <span class="req">*</span></label>
+                            <select id="event" name="event" required>
+                                <option value="" selected disabled>Choose an event</option>
+                                <option value="6">Startup Pitch Day (Seminar, 04 Nov), 37 seats left</option>
+                                <option value="1">CodeSprint Hackathon (Technical, 06 Nov), 45 seats left</option>
+                                <option value="4" disabled>Classical Dance Night (Cultural, 09 Nov), FULL</option>
+                                <option value="2">Robotics Workshop (Technical, 13 Nov), 26 seats left</option>
+                                <option value="5">Inter-College Cricket (Sports, 16 Nov), 18 seats left</option>
+                                <option value="3">Annual Cultural Fest (Cultural, 21 Nov), 194 seats left</option>
+                                <option value="7" disabled>Freshers Quiz (Technical, 22 Oct), CLOSED</option>
+                            </select>
+                            <span class="hint">Full and closed events cannot be selected.</span>
+                        </div>
+
+                        <div class="field">
+                            <label for="roll">Roll number <span class="req">*</span></label>
+                            <input type="text" id="roll" name="roll" placeholder="e.g. 22CS101"
+                                   pattern="[0-9]{2}[A-Za-z]{2}[0-9]{3}" title="Format: 2 digits, 2 letters, 3 digits (e.g. 22CS101)" required>
+                            <span class="hint">Format: 22CS101</span>
+                        </div>
+
+                        <div class="field">
+                            <label for="name">Full name <span class="req">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="e.g. Ravi Kumar" minlength="3" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="dept">Department <span class="req">*</span></label>
+                            <select id="dept" name="dept" required>
+                                <option value="" selected disabled>Choose department</option>
+                                <option>CSE</option>
+                                <option>IT</option>
+                                <option>AI&amp;DS</option>
+                                <option>ECE</option>
+                                <option>EEE</option>
+                                <option>MECH</option>
+                                <option>CIVIL</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="year">Year of study <span class="req">*</span></label>
+                            <select id="year" name="year" required>
+                                <option value="" selected disabled>Choose year</option>
+                                <option>1st Year</option>
+                                <option>2nd Year</option>
+                                <option>3rd Year</option>
+                                <option>4th Year</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="email">Email <span class="req">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="you@student.edu" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="phone">Phone number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number"
+                                   pattern="[6-9][0-9]{9}" title="Enter a valid 10-digit mobile number">
+                        </div>
+
+                        <div class="field full">
+                            <label class="checkbox">
+                                <input type="checkbox" name="agree" required>
+                                I confirm the details above are correct and I will attend the event.
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn">Confirm registration <i class="icon icon-arrow"></i></button>
+                        <button type="reset" class="btn btn-outline">Clear form</button>
+                    </div>
+                </form>
+
+                <!-- ===== Rules side panel ===== -->
+                <aside class="card info-card">
+                    <h3>Registration rules</h3>
+                    <ul class="rule-list">
+                        <li><i class="icon icon-check"></i> One registration per roll number per event.</li>
+                        <li><i class="icon icon-check"></i> Registration closes once the participant limit is reached.</li>
+                        <li><i class="icon icon-check"></i> Events whose date has passed are closed.</li>
+                        <li><i class="icon icon-check"></i> Use a valid email. Event updates are sent there.</li>
+                        <li><i class="icon icon-check"></i> Carry your college ID card on the event day.</li>
+                    </ul>
+                    <hr style="border: none; border-top: 1px solid var(--border); margin: 22px 0;">
+                    <p style="margin: 0 0 12px; color: var(--muted); font-size: 0.9rem;">Not sure which event to pick?</p>
+                    <a href="events.html" class="btn btn-outline btn-block">Browse all events</a>
+                </aside>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span>&copy; 2026 CampusEvents &middot; College Event Registration System</span>
+            <nav class="footer-links">
+                <a href="events.html">Events</a>
+                <a href="register.html">Register</a>
+                <a href="participants.html">Participants</a>
+                <a href="admin.html">Admin</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>

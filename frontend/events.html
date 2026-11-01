@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Events | CampusEvents</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== Header ===== -->
+    <header class="site-header">
+        <div class="container nav">
+            <a href="index.html" class="brand">
+                <span class="brand-logo">CE</span>
+                <span>Campus<strong>Events</strong></span>
+            </a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu"><span></span></label>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="events.html" class="active">Events</a>
+                <a href="register.html">Register</a>
+                <a href="participants.html">Participants</a>
+                <a href="admin.html">Admin</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <div class="container">
+                <h1>All Events</h1>
+                <p>Filter by category to find events you are interested in.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+
+                <!--
+                    Category filter (pure CSS):
+                    clicking a chip changes the URL to #technical, #cultural, ...
+                    The matching span becomes :target and CSS hides the other cards.
+                -->
+                <span id="technical" class="filter-target"></span>
+                <span id="cultural" class="filter-target"></span>
+                <span id="sports" class="filter-target"></span>
+                <span id="seminar" class="filter-target"></span>
+
+                <div class="filter-bar">
+                    <a href="#all" class="chip-all">All</a>
+                    <a href="#technical">Technical</a>
+                    <a href="#cultural">Cultural</a>
+                    <a href="#sports">Sports</a>
+                    <a href="#seminar">Seminar</a>
+                </div>
+
+                <div class="event-grid">
+
+                    <!-- 1. Startup Pitch Day -->
+                    <article class="event-card cat-seminar">
+                        <div class="event-card-top">
+                            <span class="tag tag-seminar">Seminar</span>
+                            <span class="badge badge-open">Open</span>
+                        </div>
+                        <h3>Startup Pitch Day</h3>
+                        <p class="event-desc">Pitch your startup idea to alumni founders and win incubation support.</p>
+                        <ul class="meta">
+                            <li><i class="icon icon-calendar"></i> Wed, 04 Nov 2026</li>
+                            <li><i class="icon icon-pin"></i> Conference Hall</li>
+                        </ul>
+                        <div class="seats">
+                            <div class="seats-label"><span><strong>3</strong> / 40 registered</span><span>37 seats left</span></div>
+                            <div class="progress"><span style="width: 8%"></span></div>
+                        </div>
+                        <a href="register.html" class="btn btn-block">Register now</a>
+                    </article>
+
+                    <!-- 2. CodeSprint Hackathon -->
+                    <article class="event-card cat-technical">
+                        <div class="event-card-top">
+                            <span class="tag tag-technical">Technical</span>
+                            <span class="badge badge-open">Open</span>
+                        </div>
+                        <h3>CodeSprint Hackathon</h3>
+                        <p class="event-desc">A 24-hour coding marathon. Build, break and ship with your team.</p>
+                        <ul class="meta">
+                            <li><i class="icon icon-calendar"></i> Fri, 06 Nov 2026</li>
+                            <li><i class="icon icon-pin"></i> CSE Lab Block</li>
+                        </ul>
+                        <div class="seats">
+                            <div class="seats-label"><span><strong>5</strong> / 50 registered</span><span>45 seats left</span></div>
+                            <div class="progress"><span style="width: 10%"></span></div>
+                        </div>
+                        <a href="register.html" class="btn btn-block">Register now</a>
+                    </article>
+
+                    <!-- 3. Classical Dance Night (FULL) -->
+                    <article class="event-card cat-cultural">
+                        <div class="event-card-top">
+                            <span class="tag tag-cultural">Cultural</span>
+                            <span class="badge badge-full">Full</span>
+                        </div>
+                        <h3>Classical Dance Night</h3>
+                        <p class="event-desc">An evening of Bharatanatyam and Kuchipudi performances under the stars.</p>
+                        <ul class="meta">
+                            <li><i class="icon icon-calendar"></i> Mon, 09 Nov 2026</li>
+                            <li><i class="icon icon-pin"></i> Open Air Theatre</li>
+                        </ul>
+                        <div class="seats">
+                            <div class="seats-label"><span><strong>3</strong> / 3 registered</span><span>No seats left</span></div>
+                            <div class="progress"><span class="full" style="width: 100%"></span></div>
+                        </div>
+                        <span class="btn btn-block btn-disabled">House full</span>
+                    </article>
+
+                    <!-- 4. Robotics Workshop -->
+                    <article class="event-card cat-technical">
+                        <div class="event-card-top">
+                            <span class="tag tag-technical">Technical</span>
+                            <span class="badge badge-open">Open</span>
+                        </div>
+                        <h3>Robotics Workshop</h3>
+                        <p class="event-desc">Hands-on session building and programming a line-following robot.</p>
+                        <ul class="meta">
+                            <li><i class="icon icon-calendar"></i> Fri, 13 Nov 2026</li>
+                            <li><i class="icon icon-pin"></i> Mech Seminar Hall</li>
+                        </ul>
+                        <div class="seats">
+                            <div class="seats-label"><span><strong>4</strong> / 30 registered</span><span>26 seats left</span></div>
+                            <div class="progress"><span style="width: 13%"></span></div>
+                        </div>
+                        <a href="register.html" class="btn btn-block">Register now</a>
+                    </article>
+
+                    <!-- 5. Inter-College Cricket -->
+                    <article class="event-card cat-sports">
+                        <div class="event-card-top">
+                            <span class="tag tag-sports">Sports</span>
+                            <span class="badge badge-open">Open</span>
+                        </div>
+                        <h3>Inter-College Cricket</h3>
+                        <p class="event-desc">T20 tournament against teams from across the city. Trials on the day.</p>
+                        <ul class="meta">
+                            <li><i class="icon icon-calendar"></i> Mon, 16 Nov 2026</li>
+                            <li><i class="icon icon-pin"></i> College Ground</li>
+                        </ul>
+                        <div class="seats">
+                            <div class="seats-label"><span><strong>4</strong> / 22 registered</span><span>18 seats left</span></div>
+                            <div class="progress"><span style="width: 18%"></span></div>
+                        </div>
+                        <a href="register.html" class="btn btn-block">Register now</a>
+                    </article>
+
+                    <!-- 6. Annual Cultural Fest -->
+                    <article class="event-card cat-cultural">
+                        <div class="event-card-top">
+                            <span class="tag tag-cultural">Cultural</span>
+                            <span class="badge badge-open">Open</span>
+                        </div>
+                        <h3>Annual Cultural Fest</h3>
+                        <p class="event-desc">Music, drama, fashion show and food stalls. The biggest night of the year.</p>
+                        <ul class="meta">
+                            <li><i class="icon icon-calendar"></i> Sat, 21 Nov 2026</li>
+                            <li><i class="icon icon-pin"></i> Main Auditorium</li>
+                        </ul>
+                        <div class="seats">
+                            <div class="seats-label"><span><strong>6</strong> / 200 registered</span><span>194 seats left</span></div>
+                            <div class="progress"><span style="width: 3%"></span></div>
+                        </div>
+                        <a href="register.html" class="btn btn-block">Register now</a>
+                    </article>
+
+                    <!-- 7. Freshers Quiz (CLOSED - date has passed) -->
+                    <article class="event-card cat-technical is-closed">
+                        <div class="event-card-top">
+                            <span class="tag tag-technical">Technical</span>
+                            <span class="badge badge-closed">Closed</span>
+                        </div>
+                        <h3>Freshers Quiz</h3>
+                        <p class="event-desc">General and tech quiz for first-year students. Teams of two.</p>
+                        <ul class="meta">
+                            <li><i class="icon icon-calendar"></i> Thu, 22 Oct 2026</li>
+                            <li><i class="icon icon-pin"></i> Library Hall</li>
+                        </ul>
+                        <div class="seats">
+                            <div class="seats-label"><span><strong>4</strong> / 60 registered</span><span>Event over</span></div>
+                            <div class="progress"><span class="closed" style="width: 7%"></span></div>
+                        </div>
+                        <span class="btn btn-block btn-disabled">Registration closed</span>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span>&copy; 2026 CampusEvents &middot; College Event Registration System</span>
+            <nav class="footer-links">
+                <a href="events.html">Events</a>
+                <a href="register.html">Register</a>
+                <a href="participants.html">Participants</a>
+                <a href="admin.html">Admin</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>

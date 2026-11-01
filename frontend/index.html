@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusEvents | College Event Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== Header ===== -->
+    <header class="site-header">
+        <div class="container nav">
+            <a href="index.html" class="brand">
+                <span class="brand-logo">CE</span>
+                <span>Campus<strong>Events</strong></span>
+            </a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu"><span></span></label>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="events.html">Events</a>
+                <a href="register.html">Register</a>
+                <a href="participants.html">Participants</a>
+                <a href="admin.html">Admin</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== Hero ===== -->
+        <section class="hero">
+            <div class="container">
+                <span class="hero-eyebrow">November 2026 &middot; 6 events coming up</span>
+                <h1>Discover, register and take part in campus events</h1>
+                <p>Hackathons, workshops, fests and sports meets, all in one place. Pick an event, grab your seat before it fills up, and see who else is going.</p>
+                <div class="hero-actions">
+                    <a href="events.html" class="btn btn-light">Browse events <i class="icon icon-arrow"></i></a>
+                    <a href="register.html" class="btn btn-ghost-light">Register now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Stats ===== -->
+        <div class="container">
+            <div class="stats">
+                <div class="stat-card"><strong>6</strong><span>Upcoming events</span></div>
+                <div class="stat-card"><strong>4</strong><span>Categories</span></div>
+                <div class="stat-card"><strong>29</strong><span>Registrations</span></div>
+                <div class="stat-card"><strong>320</strong><span>Seats available</span></div>
+            </div>
+        </div>
+
+        <!-- ===== Happening soon ===== -->
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Happening soon</h2>
+                        <p>The next three events on the calendar</p>
+                    </div>
+                    <a href="events.html" class="btn btn-outline">View all events</a>
+                </div>
+
+                <div class="event-grid">
+                    <article class="event-card cat-seminar">
+                        <div class="event-card-top">
+                            <span class="tag tag-seminar">Seminar</span>
+                            <span class="badge badge-open">Open</span>
+                        </div>
+                        <h3>Startup Pitch Day</h3>
+                        <p class="event-desc">Pitch your startup idea to alumni founders and win incubation support.</p>
+                        <ul class="meta">
+                            <li><i class="icon icon-calendar"></i> Wed, 04 Nov 2026</li>
+                            <li><i class="icon icon-pin"></i> Conference Hall</li>
+                        </ul>
+                        <div class="seats">
+                            <div class="seats-label"><span><strong>3</strong> / 40 registered</span><span>37 seats left</span></div>
+                            <div class="progress"><span style="width: 8%"></span></div>
+                        </div>
+                        <a href="register.html" class="btn btn-block">Register now</a>
+                    </article>
+
+                    <article class="event-card cat-technical">
+                        <div class="event-card-top">
+                            <span class="tag tag-technical">Technical</span>
+                            <span class="badge badge-open">Open</span>
+                        </div>
+                        <h3>CodeSprint Hackathon</h3>
+                        <p class="event-desc">A 24-hour coding marathon. Build, break and ship with your team.</p>
+                        <ul class="meta">
+                            <li><i class="icon icon-calendar"></i> Fri, 06 Nov 2026</li>
+                            <li><i class="icon icon-pin"></i> CSE Lab Block</li>
+                        </ul>
+                        <div class="seats">
+                            <div class="seats-label"><span><strong>5</strong> / 50 registered</span><span>45 seats left</span></div>
+                            <div class="progress"><span style="width: 10%"></span></div>
+                        </div>
+                        <a href="register.html" class="btn btn-block">Register now</a>
+                    </article>
+
+                    <article class="event-card cat-cultural">
+                        <div class="event-card-top">
+                            <span class="tag tag-cultural">Cultural</span>
+                            <span class="badge badge-full">Full</span>
+                        </div>
+                        <h3>Classical Dance Night</h3>
+                        <p class="event-desc">An evening of Bharatanatyam and Kuchipudi performances under the stars.</p>
+                        <ul class="meta">
+                            <li><i class="icon icon-calendar"></i> Mon, 09 Nov 2026</li>
+                            <li><i class="icon icon-pin"></i> Open Air Theatre</li>
+                        </ul>
+                        <div class="seats">
+                            <div class="seats-label"><span><strong>3</strong> / 3 registered</span><span>No seats left</span></div>
+                            <div class="progress"><span class="full" style="width: 100%"></span></div>
+                        </div>
+                        <span class="btn btn-block btn-disabled">House full</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Categories ===== -->
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Browse by category</h2>
+                        <p>Jump straight to the kind of event you enjoy</p>
+                    </div>
+                </div>
+
+                <div class="category-grid">
+                    <a href="events.html#technical" class="category-tile technical">
+                        <span class="cat-icon">💻</span>
+                        <h3>Technical</h3>
+                        <p>3 events &middot; hackathons, workshops, quizzes</p>
+                    </a>
+                    <a href="events.html#cultural" class="category-tile cultural">
+                        <span class="cat-icon">🎭</span>
+                        <h3>Cultural</h3>
+                        <p>2 events &middot; fests, dance and music</p>
+                    </a>
+                    <a href="events.html#sports" class="category-tile sports">
+                        <span class="cat-icon">🏏</span>
+                        <h3>Sports</h3>
+                        <p>1 event &middot; inter-college tournaments</p>
+                    </a>
+                    <a href="events.html#seminar" class="category-tile seminar">
+                        <span class="cat-icon">🎤</span>
+                        <h3>Seminar</h3>
+                        <p>1 event &middot; talks and pitch sessions</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span>&copy; 2026 CampusEvents &middot; College Event Registration System</span>
+            <nav class="footer-links">
+                <a href="events.html">Events</a>
+                <a href="register.html">Register</a>
+                <a href="participants.html">Participants</a>
+                <a href="admin.html">Admin</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>

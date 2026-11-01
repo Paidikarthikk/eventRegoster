@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participants | CampusEvents</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== Header ===== -->
+    <header class="site-header">
+        <div class="container nav">
+            <a href="index.html" class="brand">
+                <span class="brand-logo">CE</span>
+                <span>Campus<strong>Events</strong></span>
+            </a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu"><span></span></label>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="register.html">Register</a>
+                <a href="participants.html" class="active">Participants</a>
+                <a href="admin.html">Admin</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <div class="container">
+                <h1>Registered Participants</h1>
+                <p>See who has signed up for each event.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+
+                <!-- ===== Summary ===== -->
+                <div class="section-head">
+                    <div>
+                        <h2>Overview</h2>
+                        <p>Click an event to jump to its participant list.</p>
+                    </div>
+                </div>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Event</th>
+                                <th>Category</th>
+                                <th>Date</th>
+                                <th>Registered</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="num">1</td>
+                                <td><a href="#event-1">CodeSprint Hackathon</a></td>
+                                <td><span class="tag tag-technical">Technical</span></td>
+                                <td>06 Nov 2026</td>
+                                <td>5 / 50</td>
+                                <td><span class="badge badge-open">Open</span></td>
+                            </tr>
+                            <tr>
+                                <td class="num">2</td>
+                                <td><a href="#event-2">Robotics Workshop</a></td>
+                                <td><span class="tag tag-technical">Technical</span></td>
+                                <td>13 Nov 2026</td>
+                                <td>4 / 30</td>
+                                <td><span class="badge badge-open">Open</span></td>
+                            </tr>
+                            <tr>
+                                <td class="num">3</td>
+                                <td><a href="#event-3">Annual Cultural Fest</a></td>
+                                <td><span class="tag tag-cultural">Cultural</span></td>
+                                <td>21 Nov 2026</td>
+                                <td>6 / 200</td>
+                                <td><span class="badge badge-open">Open</span></td>
+                            </tr>
+                            <tr>
+                                <td class="num">4</td>
+                                <td><a href="#event-4">Classical Dance Night</a></td>
+                                <td><span class="tag tag-cultural">Cultural</span></td>
+                                <td>09 Nov 2026</td>
+                                <td>3 / 3</td>
+                                <td><span class="badge badge-full">Full</span></td>
+                            </tr>
+                            <tr>
+                                <td class="num">5</td>
+                                <td><a href="#event-5">Inter-College Cricket</a></td>
+                                <td><span class="tag tag-sports">Sports</span></td>
+                                <td>16 Nov 2026</td>
+                                <td>4 / 22</td>
+                                <td><span class="badge badge-open">Open</span></td>
+                            </tr>
+                            <tr>
+                                <td class="num">6</td>
+                                <td><a href="#event-6">Startup Pitch Day</a></td>
+                                <td><span class="tag tag-seminar">Seminar</span></td>
+                                <td>04 Nov 2026</td>
+                                <td>3 / 40</td>
+                                <td><span class="badge badge-open">Open</span></td>
+                            </tr>
+                            <tr>
+                                <td class="num">7</td>
+                                <td><a href="#event-7">Freshers Quiz</a></td>
+                                <td><span class="tag tag-technical">Technical</span></td>
+                                <td>22 Oct 2026</td>
+                                <td>4 / 60</td>
+                                <td><span class="badge badge-closed">Closed</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- ===== 1. CodeSprint Hackathon ===== -->
+                <div class="participant-block" id="event-1">
+                    <div class="participant-head">
+                        <h3>CodeSprint Hackathon <span class="tag tag-technical">Technical</span></h3>
+                        <span class="count"><i class="icon icon-users"></i> 5 / 50 registered</span>
+                    </div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr><th>No.</th><th>Roll No</th><th>Name</th><th>Department</th><th>Email</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="num">1</td><td class="roll">22CS101</td><td>Ravi Kumar</td><td>CSE</td><td>ravi.kumar@student.edu</td></tr>
+                                <tr><td class="num">2</td><td class="roll">22CS118</td><td>Priya Sharma</td><td>CSE</td><td>priya.sharma@student.edu</td></tr>
+                                <tr><td class="num">3</td><td class="roll">22IT034</td><td>Karthik Rao</td><td>IT</td><td>karthik.rao@student.edu</td></tr>
+                                <tr><td class="num">4</td><td class="roll">22AD007</td><td>Ananya Iyer</td><td>AI&amp;DS</td><td>ananya.iyer@student.edu</td></tr>
+                                <tr><td class="num">5</td><td class="roll">22EC061</td><td>Rahul Verma</td><td>ECE</td><td>rahul.verma@student.edu</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- ===== 2. Robotics Workshop ===== -->
+                <div class="participant-block" id="event-2">
+                    <div class="participant-head">
+                        <h3>Robotics Workshop <span class="tag tag-technical">Technical</span></h3>
+                        <span class="count"><i class="icon icon-users"></i> 4 / 30 registered</span>
+                    </div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr><th>No.</th><th>Roll No</th><th>Name</th><th>Department</th><th>Email</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="num">1</td><td class="roll">22ME015</td><td>Vikram Singh</td><td>MECH</td><td>vikram.singh@student.edu</td></tr>
+                                <tr><td class="num">2</td><td class="roll">22EE022</td><td>Divya Nair</td><td>EEE</td><td>divya.nair@student.edu</td></tr>
+                                <tr><td class="num">3</td><td class="roll">22EC045</td><td>Sneha Reddy</td><td>ECE</td><td>sneha.reddy@student.edu</td></tr>
+                                <tr><td class="num">4</td><td class="roll">22ME040</td><td>Aditya Patil</td><td>MECH</td><td>aditya.patil@student.edu</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- ===== 3. Annual Cultural Fest ===== -->
+                <div class="participant-block" id="event-3">
+                    <div class="participant-head">
+                        <h3>Annual Cultural Fest <span class="tag tag-cultural">Cultural</span></h3>
+                        <span class="count"><i class="icon icon-users"></i> 6 / 200 registered</span>
+                    </div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr><th>No.</th><th>Roll No</th><th>Name</th><th>Department</th><th>Email</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="num">1</td><td class="roll">22IT012</td><td>Arjun Varma</td><td>IT</td><td>arjun.varma@student.edu</td></tr>
+                                <tr><td class="num">2</td><td class="roll">22CS130</td><td>Meera Joshi</td><td>CSE</td><td>meera.joshi@student.edu</td></tr>
+                                <tr><td class="num">3</td><td class="roll">22CV008</td><td>Sai Teja</td><td>CIVIL</td><td>sai.teja@student.edu</td></tr>
+                                <tr><td class="num">4</td><td class="roll">22EC077</td><td>Kavya Menon</td><td>ECE</td><td>kavya.menon@student.edu</td></tr>
+                                <tr><td class="num">5</td><td class="roll">22CS145</td><td>Nikhil Gupta</td><td>CSE</td><td>nikhil.gupta@student.edu</td></tr>
+                                <tr><td class="num">6</td><td class="roll">22AD019</td><td>Harini S</td><td>AI&amp;DS</td><td>harini.s@student.edu</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- ===== 4. Classical Dance Night ===== -->
+                <div class="participant-block" id="event-4">
+                    <div class="participant-head">
+                        <h3>Classical Dance Night <span class="tag tag-cultural">Cultural</span></h3>
+                        <span class="count"><i class="icon icon-users"></i> 3 / 3 registered &middot; <span class="badge badge-full">Full</span></span>
+                    </div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr><th>No.</th><th>Roll No</th><th>Name</th><th>Department</th><th>Email</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="num">1</td><td class="roll">22CS101</td><td>Ravi Kumar</td><td>CSE</td><td>ravi.kumar@student.edu</td></tr>
+                                <tr><td class="num">2</td><td class="roll">22EC045</td><td>Sneha Reddy</td><td>ECE</td><td>sneha.reddy@student.edu</td></tr>
+                                <tr><td class="num">3</td><td class="roll">22IT012</td><td>Arjun Varma</td><td>IT</td><td>arjun.varma@student.edu</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- ===== 5. Inter-College Cricket ===== -->
+                <div class="participant-block" id="event-5">
+                    <div class="participant-head">
+                        <h3>Inter-College Cricket <span class="tag tag-sports">Sports</span></h3>
+                        <span class="count"><i class="icon icon-users"></i> 4 / 22 registered</span>
+                    </div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr><th>No.</th><th>Roll No</th><th>Name</th><th>Department</th><th>Email</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="num">1</td><td class="roll">22ME033</td><td>Rohit Yadav</td><td>MECH</td><td>rohit.yadav@student.edu</td></tr>
+                                <tr><td class="num">2</td><td class="roll">22CS152</td><td>Suresh Babu</td><td>CSE</td><td>suresh.babu@student.edu</td></tr>
+                                <tr><td class="num">3</td><td class="roll">22EE030</td><td>Manoj Kumar</td><td>EEE</td><td>manoj.kumar@student.edu</td></tr>
+                                <tr><td class="num">4</td><td class="roll">22CV014</td><td>Ajay Reddy</td><td>CIVIL</td><td>ajay.reddy@student.edu</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- ===== 6. Startup Pitch Day ===== -->
+                <div class="participant-block" id="event-6">
+                    <div class="participant-head">
+                        <h3>Startup Pitch Day <span class="tag tag-seminar">Seminar</span></h3>
+                        <span class="count"><i class="icon icon-users"></i> 3 / 40 registered</span>
+                    </div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr><th>No.</th><th>Roll No</th><th>Name</th><th>Department</th><th>Email</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="num">1</td><td class="roll">22AD011</td><td>Lakshmi Prasad</td><td>AI&amp;DS</td><td>lakshmi.prasad@student.edu</td></tr>
+                                <tr><td class="num">2</td><td class="roll">22CS118</td><td>Priya Sharma</td><td>CSE</td><td>priya.sharma@student.edu</td></tr>
+                                <tr><td class="num">3</td><td class="roll">22IT050</td><td>Varun Chopra</td><td>IT</td><td>varun.chopra@student.edu</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- ===== 7. Freshers Quiz ===== -->
+                <div class="participant-block" id="event-7">
+                    <div class="participant-head">
+                        <h3>Freshers Quiz <span class="tag tag-technical">Technical</span></h3>
+                        <span class="count"><i class="icon icon-users"></i> 4 / 60 registered &middot; <span class="badge badge-closed">Closed</span></span>
+                    </div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr><th>No.</th><th>Roll No</th><th>Name</th><th>Department</th><th>Email</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="num">1</td><td class="roll">22CS160</td><td>Pooja Rani</td><td>CSE</td><td>pooja.rani@student.edu</td></tr>
+                                <tr><td class="num">2</td><td class="roll">22EC090</td><td>Akhil Kumar</td><td>ECE</td><td>akhil.kumar@student.edu</td></tr>
+                                <tr><td class="num">3</td><td class="roll">22IT021</td><td>Swathi K</td><td>IT</td><td>swathi.k@student.edu</td></tr>
+                                <tr><td class="num">4</td><td class="roll">22ME052</td><td>Ganesh Rao</td><td>MECH</td><td>ganesh.rao@student.edu</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span>&copy; 2026 CampusEvents &middot; College Event Registration System</span>
+            <nav class="footer-links">
+                <a href="events.html">Events</a>
+                <a href="register.html">Register</a>
+                <a href="participants.html">Participants</a>
+                <a href="admin.html">Admin</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>

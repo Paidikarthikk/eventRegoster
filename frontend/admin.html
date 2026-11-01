@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | CampusEvents</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== Header ===== -->
+    <header class="site-header">
+        <div class="container nav">
+            <a href="index.html" class="brand">
+                <span class="brand-logo">CE</span>
+                <span>Campus<strong>Events</strong></span>
+            </a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu"><span></span></label>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="register.html">Register</a>
+                <a href="participants.html">Participants</a>
+                <a href="admin.html" class="active">Admin</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <div class="container">
+                <h1>Admin Panel</h1>
+                <p>Manage events and participant limits.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+
+                <!-- Success messages: shown with CSS :target after a form is submitted -->
+                <div id="limit-updated" class="alert alert-success"><i class="icon icon-check"></i> Participant limit updated successfully.</div>
+                <div id="event-added" class="alert alert-success"><i class="icon icon-check"></i> New event added successfully.</div>
+
+                <div class="notice"><i class="icon icon-lock"></i> Admin actions require the admin password.</div>
+
+                <div class="admin-grid">
+
+                    <!-- ===== Set participant limit ===== -->
+                    <form class="card" action="admin.html#limit-updated" method="get">
+                        <h2>Set participant limit</h2>
+                        <p class="card-subtitle">The new limit cannot be lower than the number of students already registered.</p>
+
+                        <div class="form-grid">
+                            <div class="field full">
+                                <label for="limit-event">Event <span class="req">*</span></label>
+                                <select id="limit-event" name="event" required>
+                                    <option value="" selected disabled>Choose an event</option>
+                                    <option value="1">CodeSprint Hackathon (5 registered, limit 50)</option>
+                                    <option value="2">Robotics Workshop (4 registered, limit 30)</option>
+                                    <option value="3">Annual Cultural Fest (6 registered, limit 200)</option>
+                                    <option value="4">Classical Dance Night (3 registered, limit 3)</option>
+                                    <option value="5">Inter-College Cricket (4 registered, limit 22)</option>
+                                    <option value="6">Startup Pitch Day (3 registered, limit 40)</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <label for="new-limit">New limit <span class="req">*</span></label>
+                                <input type="number" id="new-limit" name="limit" min="1" max="1000" placeholder="e.g. 60" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="limit-pass">Admin password <span class="req">*</span></label>
+                                <input type="password" id="limit-pass" name="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" required>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-block">Update limit</button>
+                        </div>
+                    </form>
+
+                    <!-- ===== Add new event ===== -->
+                    <form class="card" action="admin.html#event-added" method="get">
+                        <h2>Add new event</h2>
+                        <p class="card-subtitle">Create an event that students can register for.</p>
+
+                        <div class="form-grid">
+                            <div class="field full">
+                                <label for="ev-name">Event name <span class="req">*</span></label>
+                                <input type="text" id="ev-name" name="name" placeholder="e.g. AI Symposium" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="ev-category">Category <span class="req">*</span></label>
+                                <select id="ev-category" name="category" required>
+                                    <option value="" selected disabled>Choose category</option>
+                                    <option>Technical</option>
+                                    <option>Cultural</option>
+                                    <option>Sports</option>
+                                    <option>Seminar</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <label for="ev-date">Date <span class="req">*</span></label>
+                                <input type="date" id="ev-date" name="date" min="2026-11-01" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="ev-venue">Venue <span class="req">*</span></label>
+                                <input type="text" id="ev-venue" name="venue" placeholder="e.g. Hall B" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="ev-limit">Participant limit <span class="req">*</span></label>
+                                <input type="number" id="ev-limit" name="limit" min="1" max="1000" placeholder="e.g. 80" required>
+                            </div>
+
+                            <div class="field full">
+                                <label for="ev-pass">Admin password <span class="req">*</span></label>
+                                <input type="password" id="ev-pass" name="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" required>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-block">Add event</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- ===== Event capacity overview ===== -->
+                <div class="section-head" style="margin-top: 48px;">
+                    <div>
+                        <h2>Event capacity</h2>
+                        <p>Current registrations against each event's limit.</p>
+                    </div>
+                </div>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Event</th>
+                                <th>Venue</th>
+                                <th>Date</th>
+                                <th>Limit</th>
+                                <th>Registered</th>
+                                <th>Seats left</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="num">1</td><td>CodeSprint Hackathon</td><td>CSE Lab Block</td><td>06 Nov 2026</td><td>50</td><td>5</td><td>45</td><td><span class="badge badge-open">Open</span></td></tr>
+                            <tr><td class="num">2</td><td>Robotics Workshop</td><td>Mech Seminar Hall</td><td>13 Nov 2026</td><td>30</td><td>4</td><td>26</td><td><span class="badge badge-open">Open</span></td></tr>
+                            <tr><td class="num">3</td><td>Annual Cultural Fest</td><td>Main Auditorium</td><td>21 Nov 2026</td><td>200</td><td>6</td><td>194</td><td><span class="badge badge-open">Open</span></td></tr>
+                            <tr><td class="num">4</td><td>Classical Dance Night</td><td>Open Air Theatre</td><td>09 Nov 2026</td><td>3</td><td>3</td><td>0</td><td><span class="badge badge-full">Full</span></td></tr>
+                            <tr><td class="num">5</td><td>Inter-College Cricket</td><td>College Ground</td><td>16 Nov 2026</td><td>22</td><td>4</td><td>18</td><td><span class="badge badge-open">Open</span></td></tr>
+                            <tr><td class="num">6</td><td>Startup Pitch Day</td><td>Conference Hall</td><td>04 Nov 2026</td><td>40</td><td>3</td><td>37</td><td><span class="badge badge-open">Open</span></td></tr>
+                            <tr><td class="num">7</td><td>Freshers Quiz</td><td>Library Hall</td><td>22 Oct 2026</td><td>60</td><td>4</td><td>&mdash;</td><td><span class="badge badge-closed">Closed</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span>&copy; 2026 CampusEvents &middot; College Event Registration System</span>
+            <nav class="footer-links">
+                <a href="events.html">Events</a>
+                <a href="register.html">Register</a>
+                <a href="participants.html">Participants</a>
+                <a href="admin.html">Admin</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>
