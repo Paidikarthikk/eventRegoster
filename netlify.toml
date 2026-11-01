@@ -1,0 +1,3 @@
+[build]
+  # The static web portal lives in frontend/ (the Java console app in src/ is not deployed)
+  publish = "frontend"
